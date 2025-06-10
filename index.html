@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tarefas - Monique</title>
+    <title>lista de tarefas - Monique</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,18 +11,19 @@
         <!-- titulo da pagina -->
         <h1 id="titulo">Lista de Tarefas da Monique</h1>
         <!-- formulario -->
-        <form action="" class="input-section">
+        <div action="" class="input-section">
             <!-- input para adicionar tarefa com texto dentro do input (placeholder) -->
             <input type="text" placeholder="Adicione aqui a tarefa..." id="tarefa">
             <!-- botão de envio da tarefa  -->
             <button id="btn-add">Adicionar tarefa</button>
-        </form>
+        </div>
+        <div class="todo-list">
+            <ul id="tasklist">
+    
+            </ul>
+        </div>
     </div>
-    <div class="todo-list">
-        <ul id="tasklist">
 
-        </ul>
-    </div>
     <script src="script.js"></script>
 </body>
 </html>
