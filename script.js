@@ -5,8 +5,7 @@ const tasklist = document.getElementById('tasklist');
 const titulo = document.getElementById('titulo');
 
 let nome = prompt("Qual o seu nome?")
-titulo.innerHTML = `lista de tarefa: ${nome}`;
-
+tarefa.focus();
 
     titulo.innerHTML = `lista de tarefa: ${nome}`;
 
@@ -14,6 +13,9 @@ titulo.innerHTML = `lista de tarefa: ${nome}`;
 btnAdd.addEventListener("click", criaTarefa);
 
 function criaTarefa(){
+    if (tarefa.value == ""){
+        alert("digte o nome da sua tarefa")
+    }else{
     const listItem = document.createElement('li')
     listItem.textContent = tarefa.value;
     //pai      recebe     filho 
@@ -42,4 +44,13 @@ function criaTarefa(){
     concluirButton.addEventListener("click", function(){
         listItem.classList.toggle('completed');
     })
-}
+    
+    //apaga input após envio
+    tarefa.value = '';
+    tarefa.focus(); //retorna o foco para o campo de entrada
+}}
+
+//envio com enter
+tarefa.addEventListener('keypress', function (e){
+    if (e.key === 'Enter')criaTarefa();
+});
